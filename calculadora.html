@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora</title>
+
+<style>
+
+
+	
+	.calc{
+		width: 200px;
+		padding: 20px;
+		margin-top: 150px;
+		margin-left: 500px;
+		border: 1px solid black;
+		
+	}
+	
+
+	.calc button{
+
+		margin: 2px;
+		width: 30px;
+		height: 30px;
+	}
+
+	.calc input{
+		width: 155px;
+		padding: 10px;
+		margin: 3px;
+	}
+
+	#pmais{
+
+		width:70px;
+	}
+
+	#pig{
+
+	width:68px;
+	}
+
+	#pdel{
+
+		width:68px;
+		}
+		
+
+</style>
+
+	
+</head>
+<body>
+
+
+
+		<div class="calc">
+		
+			<input type="text" id="tela"> 
+
+			<button id="pig" onclick="calcular()">=</button>
+			<button id="pdel" onclick="limpar()">Del</button>
+			<button id="pdi" onclick="acao('/')">/</button>
+			
+			<button id="p1" onclick="acao(1)">1</button>
+			<button id="p2" onclick="acao(2)">2</button>
+			<button id="p3" onclick="acao(3)">3</button>
+			<button id="p4" onclick="acao(4)">4</button>
+			<button id="p5" onclick="acao(5)">5</button>
+			<button id="p6 " onclick="acao(6)">6</button>
+			<button id="p7" onclick="acao(7)">7</button>
+			<button id="p8" onclick="acao(8)">8</button>
+			<button id="p9" onclick="acao(9)">9</button>
+			<button id="p0" onclick="acao(0)">0</button>
+			<button id="pponto" onclick="acao('.')">.</button>
+			<button id="pmen" onclick="acao('-')">-</button>
+			<button id="pve" onclick="acao('*')">*</button>
+			<button id="pmais" onclick="acao('+')">+</button>
+
+
+		
+		</div>
+
+
+
+		<script>
+
+				var caracteres;
+				var valor;
+
+				var tel = document.getElementById("tela")
+	
+
+				function acao(carac){
+
+					tel.value = tel.value + carac
+					
+
+				
+				}
+
+				function limpar(){
+
+					tel.value= " "
+				}
+
+				function calcular(){
+
+					tel.value = eval(tel.value);
+				}
+
+				
+	
+			
+		</script>
+		
+		
+		
+
+</body>
+</html>
